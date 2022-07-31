@@ -11,6 +11,10 @@
 		307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B6A2896CF7700E51215 /* SceneDelegate.swift */; };
 		307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B712896CF7B00E51215 /* Assets.xcassets */; };
 		307E4B822896D89500E51215 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B812896D89500E51215 /* AppCoordinator.swift */; };
+		307E4B8A2896D9F000E51215 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B882896D9F000E51215 /* FirstVC.swift */; };
+		307E4B8B2896D9F000E51215 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B892896D9F000E51215 /* FirstVC.xib */; };
+		307E4B8E2896DA3600E51215 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 307E4B8D2896DA3600E51215 /* Rswift */; };
+		307E4B912896DA8E00E51215 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B902896DA8E00E51215 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		307E4B712896CF7B00E51215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		307E4B762896CF7B00E51215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307E4B812896D89500E51215 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		307E4B882896D9F000E51215 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		307E4B892896D9F000E51215 /* FirstVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
+		307E4B902896DA8E00E51215 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307E4B8E2896DA3600E51215 /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +97,7 @@
 		307E4B7F2896D81600E51215 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				307E4B902896DA8E00E51215 /* R.generated.swift */,
 				307E4B712896CF7B00E51215 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -105,8 +114,34 @@
 		307E4B832896D8ED00E51215 /* Boarding */ = {
 			isa = PBXGroup;
 			children = (
+				307E4B862896D9A600E51215 /* Domain */,
+				307E4B842896D99900E51215 /* Presentation */,
 			);
 			path = Boarding;
+			sourceTree = "<group>";
+		};
+		307E4B842896D99900E51215 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				307E4B872896D9C800E51215 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		307E4B862896D9A600E51215 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		307E4B872896D9C800E51215 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				307E4B882896D9F000E51215 /* FirstVC.swift */,
+				307E4B892896D9F000E51215 /* FirstVC.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 307E4B792896CF7B00E51215 /* Build configuration list for PBXNativeTarget "WeZCast" */;
 			buildPhases = (
+				307E4B8F2896DA6100E51215 /* ShellScript */,
 				307E4B612896CF7700E51215 /* Sources */,
 				307E4B622896CF7700E51215 /* Frameworks */,
 				307E4B632896CF7700E51215 /* Resources */,
@@ -125,6 +161,9 @@
 			dependencies = (
 			);
 			name = WeZCast;
+			packageProductDependencies = (
+				307E4B8D2896DA3600E51215 /* Rswift */,
+			);
 			productName = WeZCast;
 			productReference = 307E4B652896CF7700E51215 /* WeZCast.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 307E4B5C2896CF7700E51215;
+			packageReferences = (
+				307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = 307E4B662896CF7700E51215 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,10 +210,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */,
+				307E4B8B2896D9F000E51215 /* FirstVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		307E4B8F2896DA6100E51215 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$SRCROOT/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		307E4B612896CF7700E51215 /* Sources */ = {
@@ -179,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				307E4B822896D89500E51215 /* AppCoordinator.swift in Sources */,
+				307E4B8A2896D9F000E51215 /* FirstVC.swift in Sources */,
+				307E4B912896DA8E00E51215 /* R.generated.swift in Sources */,
 				307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */,
 				307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */,
 			);
@@ -379,6 +446,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		307E4B8D2896DA3600E51215 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 307E4B5D2896CF7700E51215 /* Project object */;
 }

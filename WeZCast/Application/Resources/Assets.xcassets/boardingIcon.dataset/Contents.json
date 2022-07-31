@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "boardingIcon.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
