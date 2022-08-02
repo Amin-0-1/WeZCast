@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3079F2452897DCE4007BC76B /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079F2442897DCE4007BC76B /* XButton.swift */; };
+		3079F2472897DD05007BC76B /* XButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079F2462897DD05007BC76B /* XButton.xib */; };
 		307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B682896CF7700E51215 /* AppDelegate.swift */; };
 		307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B6A2896CF7700E51215 /* SceneDelegate.swift */; };
 		307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B712896CF7B00E51215 /* Assets.xcassets */; };
@@ -15,9 +17,16 @@
 		307E4B8B2896D9F000E51215 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B892896D9F000E51215 /* FirstVC.xib */; };
 		307E4B8E2896DA3600E51215 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 307E4B8D2896DA3600E51215 /* Rswift */; };
 		307E4B912896DA8E00E51215 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B902896DA8E00E51215 /* R.generated.swift */; };
+		30BE70F32896FC95009D7BC4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 30BE70F22896FC95009D7BC4 /* Lottie */; };
+		30BE70F92896FF31009D7BC4 /* icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70F82896FF31009D7BC4 /* icon.json */; };
+		30BE70FB289702F5009D7BC4 /* moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FA289702F5009D7BC4 /* moon.json */; };
+		30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FD2897095B009D7BC4 /* blueSky.json */; };
+		30BE7100289713C5009D7BC4 /* thunder.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FF289713C5009D7BC4 /* thunder.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3079F2442897DCE4007BC76B /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButton.swift; sourceTree = "<group>"; };
+		3079F2462897DD05007BC76B /* XButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XButton.xib; sourceTree = "<group>"; };
 		307E4B652896CF7700E51215 /* WeZCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeZCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307E4B682896CF7700E51215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		307E4B6A2896CF7700E51215 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +36,10 @@
 		307E4B882896D9F000E51215 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		307E4B892896D9F000E51215 /* FirstVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
 		307E4B902896DA8E00E51215 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		30BE70F82896FF31009D7BC4 /* icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon.json; sourceTree = "<group>"; };
+		30BE70FA289702F5009D7BC4 /* moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moon.json; sourceTree = "<group>"; };
+		30BE70FD2897095B009D7BC4 /* blueSky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blueSky.json; sourceTree = "<group>"; };
+		30BE70FF289713C5009D7BC4 /* thunder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thunder.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +48,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				307E4B8E2896DA3600E51215 /* Rswift in Frameworks */,
+				30BE70F32896FC95009D7BC4 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3079F2412897D9EF007BC76B /* CustomDesign */ = {
+			isa = PBXGroup;
+			children = (
+				3079F2432897DCCB007BC76B /* ButtonNextArrow */,
+			);
+			path = CustomDesign;
+			sourceTree = "<group>";
+		};
+		3079F2432897DCCB007BC76B /* ButtonNextArrow */ = {
+			isa = PBXGroup;
+			children = (
+				3079F2442897DCE4007BC76B /* XButton.swift */,
+				3079F2462897DD05007BC76B /* XButton.xib */,
+			);
+			path = ButtonNextArrow;
+			sourceTree = "<group>";
+		};
 		307E4B5C2896CF7700E51215 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +101,7 @@
 		307E4B7C2896D80100E51215 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3079F2412897D9EF007BC76B /* CustomDesign */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -97,6 +129,7 @@
 		307E4B7F2896D81600E51215 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30BE70FC2897043B009D7BC4 /* Json */,
 				307E4B902896DA8E00E51215 /* R.generated.swift */,
 				307E4B712896CF7B00E51215 /* Assets.xcassets */,
 			);
@@ -144,6 +177,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		30BE70FC2897043B009D7BC4 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				30BE70FF289713C5009D7BC4 /* thunder.json */,
+				30BE70FD2897095B009D7BC4 /* blueSky.json */,
+				30BE70FA289702F5009D7BC4 /* moon.json */,
+				30BE70F82896FF31009D7BC4 /* icon.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +207,7 @@
 			name = WeZCast;
 			packageProductDependencies = (
 				307E4B8D2896DA3600E51215 /* Rswift */,
+				30BE70F22896FC95009D7BC4 /* Lottie */,
 			);
 			productName = WeZCast;
 			productReference = 307E4B652896CF7700E51215 /* WeZCast.app */;
@@ -194,6 +239,7 @@
 			mainGroup = 307E4B5C2896CF7700E51215;
 			packageReferences = (
 				307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */,
+				30BE70F12896FC95009D7BC4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 307E4B662896CF7700E51215 /* Products */;
 			projectDirPath = "";
@@ -210,6 +256,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */,
+				3079F2472897DD05007BC76B /* XButton.xib in Resources */,
+				30BE7100289713C5009D7BC4 /* thunder.json in Resources */,
+				30BE70F92896FF31009D7BC4 /* icon.json in Resources */,
+				30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */,
+				30BE70FB289702F5009D7BC4 /* moon.json in Resources */,
 				307E4B8B2896D9F000E51215 /* FirstVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +299,7 @@
 				307E4B912896DA8E00E51215 /* R.generated.swift in Sources */,
 				307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */,
 				307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */,
+				3079F2452897DCE4007BC76B /* XButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,9 +432,9 @@
 				INFOPLIST_FILE = WeZCast/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,9 +460,9 @@
 				INFOPLIST_FILE = WeZCast/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +508,14 @@
 				kind = branch;
 			};
 		};
+		30BE70F12896FC95009D7BC4 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -463,6 +523,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
+		};
+		30BE70F22896FC95009D7BC4 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30BE70F12896FC95009D7BC4 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

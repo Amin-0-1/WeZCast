@@ -113,6 +113,59 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.file` struct is generated, and contains static references to 4 files.
+  struct file {
+    /// Resource file `blueSky.json`.
+    static let blueSkyJson = Rswift.FileResource(bundle: R.hostingBundle, name: "blueSky", pathExtension: "json")
+    /// Resource file `icon.json`.
+    static let iconJson = Rswift.FileResource(bundle: R.hostingBundle, name: "icon", pathExtension: "json")
+    /// Resource file `moon.json`.
+    static let moonJson = Rswift.FileResource(bundle: R.hostingBundle, name: "moon", pathExtension: "json")
+    /// Resource file `thunder.json`.
+    static let thunderJson = Rswift.FileResource(bundle: R.hostingBundle, name: "thunder", pathExtension: "json")
+
+    /// `bundle.url(forResource: "blueSky", withExtension: "json")`
+    static func blueSkyJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.blueSkyJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon", withExtension: "json")`
+    static func iconJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.iconJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "moon", withExtension: "json")`
+    static func moonJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.moonJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "thunder", withExtension: "json")`
+    static func thunderJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.thunderJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `dark`.
+    static let dark = Rswift.ImageResource(bundle: R.hostingBundle, name: "dark")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "dark", bundle: ..., traitCollection: ...)`
+    static func dark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.dark, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {
@@ -127,7 +180,6 @@ struct R: Rswift.Validatable {
             static let _key = "Default Configuration"
             static let uiSceneConfigurationName = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneConfigurationName") ?? "Default Configuration"
             static let uiSceneDelegateClassName = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate"
-            static let uiSceneStoryboardFile = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneStoryboardFile") ?? "Main"
 
             fileprivate init() {}
           }
@@ -144,10 +196,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `FirstVC`.
     static let firstVC = _R.nib._FirstVC()
+    /// Nib `XButton`.
+    static let xButton = _R.nib._XButton()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "FirstVC", in: bundle)`
@@ -157,8 +211,20 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "XButton", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.xButton) instead")
+    static func xButton(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.xButton)
+    }
+    #endif
+
     static func firstVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.firstVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func xButton(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.xButton.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     fileprivate init() {}
@@ -166,7 +232,7 @@ struct R: Rswift.Validatable {
 
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
 
     fileprivate init() {}
@@ -177,12 +243,39 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+  }
+
   #if os(iOS) || os(tvOS)
-  struct nib {
-    struct _FirstVC: Rswift.NibResourceType {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _FirstVC.validate()
+    }
+
+    struct _FirstVC: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "FirstVC"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.right") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'arrow.right' is used in nib 'FirstVC', but couldn't be loaded.") } }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _XButton: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "XButton"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
