@@ -12,6 +12,7 @@ import Lottie
 @IBDesignable
 class XButton: UIButton {
     
+    @IBOutlet var uiTopView: UIView!
     @IBOutlet var uiContentView: UIView!{
         didSet{
             self.uiBackgroundColor = uiContentView.backgroundColor
@@ -20,7 +21,7 @@ class XButton: UIButton {
     @IBOutlet weak var uiImage: UIImageView!
     @IBOutlet weak var uiLabel: UILabel!
     private var uiBackgroundColor:UIColor?
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSub()
@@ -34,11 +35,15 @@ class XButton: UIButton {
     private func initSub(){
         let bundle = Bundle.init(for: self.classForCoder)
         bundle.loadNibNamed(R.nib.xButton.name, owner: self, options: nil)
-        addSubview(uiContentView)
-        uiContentView.frame = self.bounds
-        uiContentView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(uiTopView)
+        uiTopView.frame = self.bounds
+        uiTopView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         uiLabel.textAlignment = .center
         
+//        uiContentView.layer.shadowRadius = 1
+//        uiContentView.layer.shadowColor = UIColor.green.cgColor
+//        uiContentView.layer.shadowOffset = CGSize(width: 2, height: 2)
+//        uiContentView.layer.shadowOpacity = 0.5
         self.animateArrowImage()
     }
     @IBInspectable var title:String?{
@@ -58,26 +63,42 @@ class XButton: UIButton {
         set {uiImage.tintColor = newValue}
     }
     @IBInspectable override var backgroundColor: UIColor? {
-        get {return uiContentView.backgroundColor}
-        set {self.uiContentView.backgroundColor = newValue}
+        get {return uiContentView?.backgroundColor}
+        set {self.uiContentView?.backgroundColor = newValue}
     }
     @IBInspectable var cornerRadius:CGFloat{
-        get {return layer.cornerRadius}
-        set {layer.cornerRadius = newValue}
+        get {return uiContentView.layer.cornerRadius}
+        set {uiContentView.layer.cornerRadius = newValue}
     }
     @IBInspectable var borderWidth: CGFloat = 0 {
         didSet {
-            layer.borderWidth = borderWidth
+            uiContentView.layer.borderWidth = borderWidth
         }
     }
     @IBInspectable var borderColor: UIColor? = .clear{
         didSet {
-            layer.borderColor = borderColor?.cgColor
+            uiContentView.layer.borderColor = borderColor?.cgColor
         }
     }
-    
+    @IBInspectable var shadowColor:UIColor?{
+        get {return UIColor(cgColor: uiContentView.layer.shadowColor ?? UIColor.clear.cgColor)}
+        set {uiContentView.layer.shadowColor = newValue?.cgColor}
+    }
+    @IBInspectable var shadowRadius:CGFloat{
+        get {return uiContentView.layer.shadowRadius}
+        set {uiContentView.layer.shadowRadius = newValue}
+    }
+    @IBInspectable var shadowOffset:CGFloat{
+        get {return uiContentView.layer.shadowOffset.height}
+        set {uiContentView.layer.shadowOffset = CGSize(width: newValue, height: newValue)}
+    }
+    @IBInspectable var shadowOpacity:Float{
+        get {return uiContentView.layer.shadowOpacity}
+        set {self.uiContentView.layer.shadowOpacity = newValue}
+    }
     override var isEnabled: Bool{
         willSet{
+            
             if newValue == true{
                 self.uiContentView.backgroundColor = .tintColor
                 self.layer.opacity = 1
@@ -98,15 +119,21 @@ class XButton: UIButton {
     }
     
     private func onPressed(){
+        UIView.animate(withDuration: 0.5, delay: 0) {
+            self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }
         self.layer.opacity = 0.4
     }
     private func onFinishPressed(){
+        UIView.animate(withDuration: 0.5, delay: 0) {
+            self.transform = .identity
+        }
         self.layer.opacity = 1
     }
     private func animateArrowImage(){
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
             guard let self = self else {return}
-                self.translate(withPoint: CGPoint(x: 20, y: 0))
+                self.translate(withPoint: CGPoint(x: 15, y: 0))
         }
     }
     private func translate(withPoint point:CGPoint){
