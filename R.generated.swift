@@ -113,12 +113,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 4 files.
+  /// This `R.file` struct is generated, and contains static references to 5 files.
   struct file {
     /// Resource file `blueSky.json`.
     static let blueSkyJson = Rswift.FileResource(bundle: R.hostingBundle, name: "blueSky", pathExtension: "json")
     /// Resource file `icon.json`.
     static let iconJson = Rswift.FileResource(bundle: R.hostingBundle, name: "icon", pathExtension: "json")
+    /// Resource file `icon2.json`.
+    static let icon2Json = Rswift.FileResource(bundle: R.hostingBundle, name: "icon2", pathExtension: "json")
     /// Resource file `moon.json`.
     static let moonJson = Rswift.FileResource(bundle: R.hostingBundle, name: "moon", pathExtension: "json")
     /// Resource file `thunder.json`.
@@ -133,6 +135,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "icon", withExtension: "json")`
     static func iconJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.iconJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "icon2", withExtension: "json")`
+    static func icon2Json(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.icon2Json
       return fileResource.bundle.url(forResource: fileResource)
     }
 
@@ -198,16 +206,16 @@ struct R: Rswift.Validatable {
 
   /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
-    /// Nib `FirstVC`.
-    static let firstVC = _R.nib._FirstVC()
+    /// Nib `OnboardingVC`.
+    static let onboardingVC = _R.nib._OnboardingVC()
     /// Nib `XButton`.
     static let xButton = _R.nib._XButton()
 
     #if os(iOS) || os(tvOS)
-    /// `UINib(name: "FirstVC", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.firstVC) instead")
-    static func firstVC(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.firstVC)
+    /// `UINib(name: "OnboardingVC", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.onboardingVC) instead")
+    static func onboardingVC(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.onboardingVC)
     }
     #endif
 
@@ -219,8 +227,8 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    static func firstVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.firstVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    static func onboardingVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.onboardingVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func xButton(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -253,19 +261,19 @@ struct _R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _FirstVC.validate()
+      try _OnboardingVC.validate()
     }
 
-    struct _FirstVC: Rswift.NibResourceType, Rswift.Validatable {
+    struct _OnboardingVC: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
-      let name = "FirstVC"
+      let name = "OnboardingVC"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
 
       static func validate() throws {
-        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.right") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'arrow.right' is used in nib 'FirstVC', but couldn't be loaded.") } }
+        if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.right") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'arrow.right' is used in nib 'OnboardingVC', but couldn't be loaded.") } }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

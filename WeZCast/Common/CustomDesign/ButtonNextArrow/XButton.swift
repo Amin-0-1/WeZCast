@@ -9,9 +9,13 @@ import UIKit
 import Lottie
 
 
+class Test: UIButton{
+    
+}
 @IBDesignable
 class XButton: UIButton {
     
+    private var onClickCallback: (()->Void )!
     @IBOutlet var uiTopView: UIView!
     @IBOutlet var uiContentView: UIView!{
         didSet{
@@ -39,11 +43,6 @@ class XButton: UIButton {
         uiTopView.frame = self.bounds
         uiTopView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         uiLabel.textAlignment = .center
-        
-//        uiContentView.layer.shadowRadius = 1
-//        uiContentView.layer.shadowColor = UIColor.green.cgColor
-//        uiContentView.layer.shadowOffset = CGSize(width: 2, height: 2)
-//        uiContentView.layer.shadowOpacity = 0.5
         self.animateArrowImage()
     }
     @IBInspectable var title:String?{
@@ -111,11 +110,11 @@ class XButton: UIButton {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.onPressed()
-        
-        
+        super.touchesBegan(touches, with: event)
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.onFinishPressed()
+        super.touchesEnded(touches, with: event)
     }
     
     private func onPressed(){
@@ -129,6 +128,7 @@ class XButton: UIButton {
             self.transform = .identity
         }
         self.layer.opacity = 1
+        onClickCallback()
     }
     private func animateArrowImage(){
         DispatchQueue.global(qos: .userInteractive).async { [weak self] in
@@ -145,6 +145,10 @@ class XButton: UIButton {
                 self.translate(withPoint: CGPoint(x: point.x * -1, y: point.y))
             }
         }
+    }
+    
+    final func onClick(doThis: @escaping ()->Void){
+        onClickCallback = doThis
     }
 }
 

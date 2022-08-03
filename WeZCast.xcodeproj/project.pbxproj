@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300BB342289B2EB700EE6B1B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BB341289B2EB700EE6B1B /* OnboardingCoordinator.swift */; };
+		300BB345289B324600EE6B1B /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BB344289B324600EE6B1B /* OnboardingState.swift */; };
+		300BB347289B32F700EE6B1B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BB346289B32F700EE6B1B /* OnboardingViewModel.swift */; };
+		300BB34A289B342F00EE6B1B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 300BB349289B342F00EE6B1B /* RxCocoa */; };
+		300BB34C289B342F00EE6B1B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 300BB34B289B342F00EE6B1B /* RxRelay */; };
+		300BB34E289B342F00EE6B1B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 300BB34D289B342F00EE6B1B /* RxSwift */; };
+		300BB350289B393200EE6B1B /* icon2.json in Resources */ = {isa = PBXBuildFile; fileRef = 300BB34F289B393200EE6B1B /* icon2.json */; };
 		3079F2452897DCE4007BC76B /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079F2442897DCE4007BC76B /* XButton.swift */; };
 		3079F2472897DD05007BC76B /* XButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079F2462897DD05007BC76B /* XButton.xib */; };
 		307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B682896CF7700E51215 /* AppDelegate.swift */; };
 		307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B6A2896CF7700E51215 /* SceneDelegate.swift */; };
 		307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B712896CF7B00E51215 /* Assets.xcassets */; };
 		307E4B822896D89500E51215 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B812896D89500E51215 /* AppCoordinator.swift */; };
-		307E4B8A2896D9F000E51215 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B882896D9F000E51215 /* FirstVC.swift */; };
-		307E4B8B2896D9F000E51215 /* FirstVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B892896D9F000E51215 /* FirstVC.xib */; };
+		307E4B8A2896D9F000E51215 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B882896D9F000E51215 /* OnboardingVC.swift */; };
+		307E4B8B2896D9F000E51215 /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B892896D9F000E51215 /* OnboardingVC.xib */; };
 		307E4B8E2896DA3600E51215 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 307E4B8D2896DA3600E51215 /* Rswift */; };
 		307E4B912896DA8E00E51215 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B902896DA8E00E51215 /* R.generated.swift */; };
 		30BE70F32896FC95009D7BC4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 30BE70F22896FC95009D7BC4 /* Lottie */; };
@@ -25,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300BB341289B2EB700EE6B1B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		300BB344289B324600EE6B1B /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
+		300BB346289B32F700EE6B1B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		300BB34F289B393200EE6B1B /* icon2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon2.json; sourceTree = "<group>"; };
 		3079F2442897DCE4007BC76B /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButton.swift; sourceTree = "<group>"; };
 		3079F2462897DD05007BC76B /* XButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XButton.xib; sourceTree = "<group>"; };
 		307E4B652896CF7700E51215 /* WeZCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeZCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,8 +44,8 @@
 		307E4B712896CF7B00E51215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		307E4B762896CF7B00E51215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307E4B812896D89500E51215 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		307E4B882896D9F000E51215 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
-		307E4B892896D9F000E51215 /* FirstVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstVC.xib; sourceTree = "<group>"; };
+		307E4B882896D9F000E51215 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		307E4B892896D9F000E51215 /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		307E4B902896DA8E00E51215 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		30BE70F82896FF31009D7BC4 /* icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon.json; sourceTree = "<group>"; };
 		30BE70FA289702F5009D7BC4 /* moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moon.json; sourceTree = "<group>"; };
@@ -47,7 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300BB34A289B342F00EE6B1B /* RxCocoa in Frameworks */,
 				307E4B8E2896DA3600E51215 /* Rswift in Frameworks */,
+				300BB34E289B342F00EE6B1B /* RxSwift in Frameworks */,
+				300BB34C289B342F00EE6B1B /* RxRelay in Frameworks */,
 				30BE70F32896FC95009D7BC4 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300BB340289B2E8800EE6B1B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				300BB341289B2EB700EE6B1B /* OnboardingCoordinator.swift */,
+				300BB346289B32F700EE6B1B /* OnboardingViewModel.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		300BB343289B322300EE6B1B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				300BB344289B324600EE6B1B /* OnboardingState.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		3079F2412897D9EF007BC76B /* CustomDesign */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +187,8 @@
 		307E4B842896D99900E51215 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				300BB343289B322300EE6B1B /* Entity */,
+				300BB340289B2E8800EE6B1B /* Logic */,
 				307E4B872896D9C800E51215 /* View */,
 			);
 			path = Presentation;
@@ -171,8 +204,8 @@
 		307E4B872896D9C800E51215 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				307E4B882896D9F000E51215 /* FirstVC.swift */,
-				307E4B892896D9F000E51215 /* FirstVC.xib */,
+				307E4B882896D9F000E51215 /* OnboardingVC.swift */,
+				307E4B892896D9F000E51215 /* OnboardingVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +217,7 @@
 				30BE70FD2897095B009D7BC4 /* blueSky.json */,
 				30BE70FA289702F5009D7BC4 /* moon.json */,
 				30BE70F82896FF31009D7BC4 /* icon.json */,
+				300BB34F289B393200EE6B1B /* icon2.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -208,6 +242,9 @@
 			packageProductDependencies = (
 				307E4B8D2896DA3600E51215 /* Rswift */,
 				30BE70F22896FC95009D7BC4 /* Lottie */,
+				300BB349289B342F00EE6B1B /* RxCocoa */,
+				300BB34B289B342F00EE6B1B /* RxRelay */,
+				300BB34D289B342F00EE6B1B /* RxSwift */,
 			);
 			productName = WeZCast;
 			productReference = 307E4B652896CF7700E51215 /* WeZCast.app */;
@@ -240,6 +277,7 @@
 			packageReferences = (
 				307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */,
 				30BE70F12896FC95009D7BC4 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				300BB348289B342F00EE6B1B /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 307E4B662896CF7700E51215 /* Products */;
 			projectDirPath = "";
@@ -260,8 +298,9 @@
 				30BE7100289713C5009D7BC4 /* thunder.json in Resources */,
 				30BE70F92896FF31009D7BC4 /* icon.json in Resources */,
 				30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */,
+				300BB350289B393200EE6B1B /* icon2.json in Resources */,
 				30BE70FB289702F5009D7BC4 /* moon.json in Resources */,
-				307E4B8B2896D9F000E51215 /* FirstVC.xib in Resources */,
+				307E4B8B2896D9F000E51215 /* OnboardingVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				307E4B822896D89500E51215 /* AppCoordinator.swift in Sources */,
-				307E4B8A2896D9F000E51215 /* FirstVC.swift in Sources */,
+				307E4B8A2896D9F000E51215 /* OnboardingVC.swift in Sources */,
 				307E4B912896DA8E00E51215 /* R.generated.swift in Sources */,
+				300BB342289B2EB700EE6B1B /* OnboardingCoordinator.swift in Sources */,
+				300BB347289B32F700EE6B1B /* OnboardingViewModel.swift in Sources */,
+				300BB345289B324600EE6B1B /* OnboardingState.swift in Sources */,
 				307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */,
 				307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */,
 				3079F2452897DCE4007BC76B /* XButton.swift in Sources */,
@@ -500,6 +542,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		300BB348289B342F00EE6B1B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
 		307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
@@ -519,6 +569,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		300BB349289B342F00EE6B1B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 300BB348289B342F00EE6B1B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		300BB34B289B342F00EE6B1B /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 300BB348289B342F00EE6B1B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		300BB34D289B342F00EE6B1B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 300BB348289B342F00EE6B1B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		307E4B8D2896DA3600E51215 /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 307E4B8C2896DA3600E51215 /* XCRemoteSwiftPackageReference "R.swift" */;

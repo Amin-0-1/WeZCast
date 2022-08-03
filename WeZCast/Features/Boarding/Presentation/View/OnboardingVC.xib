@@ -9,10 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstVC" customModule="WeZCast" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingVC">
             <connections>
-                <outlet property="uiAnimationLogo" destination="u2O-UG-Mgd" id="dic-nM-dO1"/>
                 <outlet property="uiAnimationView" destination="7Cp-og-3qd" id="8Q1-7u-lsZ"/>
+                <outlet property="uiNextButton" destination="ecS-8e-Ahf" id="oP0-ok-xFl"/>
+                <outlet property="uiStack" destination="Wsd-7i-rnR" id="vBy-Ju-Nb1"/>
+                <outlet property="uiTitle" destination="uMF-ii-3uJ" id="xco-70-FG5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,16 +42,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hot-Yc-oSr">
                                         <rect key="frame" x="8" y="20" width="366" height="230.5"/>
                                         <subviews>
-                                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2O-UG-Mgd" customClass="AnimationView" customModule="Lottie">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-7i-rnR">
                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="200"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="egV-uR-Ngc"/>
+                                                    <constraint firstAttribute="height" constant="200" id="S0e-yc-UjJ"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="icon"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kw-mu-f6T">
                                                 <rect key="frame" x="0.0" y="200" width="366" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="Verdana-BoldItalic" family="Verdana" pointSize="25"/>
@@ -108,6 +106,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
