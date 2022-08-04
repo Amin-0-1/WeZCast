@@ -18,6 +18,10 @@ struct AppCoordinatore:Coordinating{
         self.window = window
     }
     func start() {
-        
+        let nav = UINavigationController()
+        let onboardingCoordinator = OnboardingCoordinator(nav: nav)
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+        onboardingCoordinator.start()
     }
 }

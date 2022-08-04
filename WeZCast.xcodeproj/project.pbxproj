@@ -24,11 +24,10 @@
 		307E4B8B2896D9F000E51215 /* OnboardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307E4B892896D9F000E51215 /* OnboardingVC.xib */; };
 		307E4B8E2896DA3600E51215 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 307E4B8D2896DA3600E51215 /* Rswift */; };
 		307E4B912896DA8E00E51215 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B902896DA8E00E51215 /* R.generated.swift */; };
+		30B96CB2289C32840079AC38 /* MyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CB1289C32840079AC38 /* MyUserDefaults.swift */; };
 		30BE70F32896FC95009D7BC4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 30BE70F22896FC95009D7BC4 /* Lottie */; };
 		30BE70F92896FF31009D7BC4 /* icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70F82896FF31009D7BC4 /* icon.json */; };
-		30BE70FB289702F5009D7BC4 /* moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FA289702F5009D7BC4 /* moon.json */; };
 		30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FD2897095B009D7BC4 /* blueSky.json */; };
-		30BE7100289713C5009D7BC4 /* thunder.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FF289713C5009D7BC4 /* thunder.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +46,9 @@
 		307E4B882896D9F000E51215 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		307E4B892896D9F000E51215 /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		307E4B902896DA8E00E51215 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		30B96CB1289C32840079AC38 /* MyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUserDefaults.swift; sourceTree = "<group>"; };
 		30BE70F82896FF31009D7BC4 /* icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon.json; sourceTree = "<group>"; };
-		30BE70FA289702F5009D7BC4 /* moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moon.json; sourceTree = "<group>"; };
 		30BE70FD2897095B009D7BC4 /* blueSky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blueSky.json; sourceTree = "<group>"; };
-		30BE70FF289713C5009D7BC4 /* thunder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thunder.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +130,7 @@
 		307E4B7C2896D80100E51215 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				30B96CB0289C32750079AC38 /* LocalStorage */,
 				3079F2412897D9EF007BC76B /* CustomDesign */,
 			);
 			path = Common;
@@ -210,12 +209,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		30B96CB0289C32750079AC38 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CB1289C32840079AC38 /* MyUserDefaults.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
 		30BE70FC2897043B009D7BC4 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				30BE70FF289713C5009D7BC4 /* thunder.json */,
 				30BE70FD2897095B009D7BC4 /* blueSky.json */,
-				30BE70FA289702F5009D7BC4 /* moon.json */,
 				30BE70F82896FF31009D7BC4 /* icon.json */,
 				300BB34F289B393200EE6B1B /* icon2.json */,
 			);
@@ -295,11 +300,9 @@
 			files = (
 				307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */,
 				3079F2472897DD05007BC76B /* XButton.xib in Resources */,
-				30BE7100289713C5009D7BC4 /* thunder.json in Resources */,
 				30BE70F92896FF31009D7BC4 /* icon.json in Resources */,
 				30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */,
 				300BB350289B393200EE6B1B /* icon2.json in Resources */,
-				30BE70FB289702F5009D7BC4 /* moon.json in Resources */,
 				307E4B8B2896D9F000E51215 /* OnboardingVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +342,7 @@
 				300BB342289B2EB700EE6B1B /* OnboardingCoordinator.swift in Sources */,
 				300BB347289B32F700EE6B1B /* OnboardingViewModel.swift in Sources */,
 				300BB345289B324600EE6B1B /* OnboardingState.swift in Sources */,
+				30B96CB2289C32840079AC38 /* MyUserDefaults.swift in Sources */,
 				307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */,
 				307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */,
 				3079F2452897DCE4007BC76B /* XButton.swift in Sources */,

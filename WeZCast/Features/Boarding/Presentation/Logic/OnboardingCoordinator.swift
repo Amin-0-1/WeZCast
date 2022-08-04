@@ -14,21 +14,16 @@ protocol OnboardingCoordinating:Coordinating{
 
 class OnboardingCoordinator : OnboardingCoordinating{
     
-    private var window:UIWindow!
     private var nav:UINavigationController!
     
-    init(window:UIWindow?){
-        self.window = window
+    init(nav:UINavigationController?){
+        self.nav = nav
     }
     func start() {
         let vc = OnboardingVC.init(nibName: R.nib.onboardingVC.name, bundle: nil)
         vc.onboarding = .first
         vc.viewModel = OnboardingViewModel(coordinator: self)
-        nav = UINavigationController(rootViewController: vc)
-        
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-        
+        nav.pushViewController(vc, animated: true)
     }
     
     func navigateToNext() {
