@@ -15,21 +15,25 @@ protocol OnboardingCoordinating:Coordinating{
 class OnboardingCoordinator : OnboardingCoordinating{
     
     private var nav:UINavigationController!
+    private var usecase:OnboardingUsecaseProtocol!
+    private var userdefaults:LocalStorageInterface!
     
     init(nav:UINavigationController?){
         self.nav = nav
+        userdefaults = MyUserDefaults.shared
+        usecase = OnboardingUsecase(userdefaults: userdefaults)
     }
     func start() {
         let vc = OnboardingVC.init(nibName: R.nib.onboardingVC.name, bundle: nil)
         vc.onboarding = .first
-        vc.viewModel = OnboardingViewModel(coordinator: self)
+        vc.viewModel = OnboardingViewModel(coordinator: self,usecase: usecase)
         nav.pushViewController(vc, animated: true)
     }
     
     func navigateToNext() {
         let vc = OnboardingVC.init(nibName: R.nib.onboardingVC.name, bundle: nil)
         vc.onboarding = .second
-        vc.viewModel = OnboardingViewModel(coordinator: self)
+        vc.viewModel = OnboardingViewModel(coordinator: self,usecase: usecase)
         nav.pushViewController(vc, animated: true)
     }
 }

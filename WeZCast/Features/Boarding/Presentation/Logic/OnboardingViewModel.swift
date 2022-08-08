@@ -11,11 +11,14 @@ import RxCocoa
 
 protocol OnboardingInput{
     var onNext:PublishSubject<Void>{get}
+    var onFinishOnboarding:PublishSubject<Void>{get}
 }
 struct OnboardingVMInput:OnboardingInput{
     var onNext: PublishSubject<Void>
+    var onFinishOnboarding: PublishSubject<Void>
     init(){
         onNext = PublishSubject()
+        onFinishOnboarding = PublishSubject()
     }
 }
 protocol OnboardingOutput{
@@ -36,17 +39,23 @@ class OnboardingViewModel: OnboardingProtocol{
     
     private var bag:DisposeBag!
     private var coordinator:OnboardingCoordinating
-    init(coordinator:OnboardingCoordinating){
+    private var usecase:OnboardingUsecaseProtocol!
+    init(coordinator:OnboardingCoordinating,usecase:OnboardingUsecaseProtocol){
+        self.coordinator = coordinator
+        self.usecase = usecase
         input = OnboardingVMInput()
         output = OnboardingVMOutput()
         bag = DisposeBag()
-        self.coordinator = coordinator
         bind()
     }
     private func bind(){
         input.onNext.bind{ [weak self] _ in
             guard let self = self else {return}
             self.coordinator.navigateToNext()
+        }.disposed(by: bag)
+        input.onFinishOnboarding.bind{ [weak self] _ in
+            guard let self = self else {return}
+            self.usecase.onFinishOnboarind()
         }.disposed(by: bag)
     }
     

@@ -14,6 +14,10 @@
 		300BB34C289B342F00EE6B1B /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 300BB34B289B342F00EE6B1B /* RxRelay */; };
 		300BB34E289B342F00EE6B1B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 300BB34D289B342F00EE6B1B /* RxSwift */; };
 		300BB350289B393200EE6B1B /* icon2.json in Resources */ = {isa = PBXBuildFile; fileRef = 300BB34F289B393200EE6B1B /* icon2.json */; };
+		3010990928A0FB4A00058A3D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010990828A0FB4A00058A3D /* AppConfig.swift */; };
+		3010990F28A108BE00058A3D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010990D28A108BE00058A3D /* HomeVC.swift */; };
+		3010991028A108BE00058A3D /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3010990E28A108BE00058A3D /* HomeVC.xib */; };
+		3010991328A10AC200058A3D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3010991228A10AC200058A3D /* HomeCoordinator.swift */; };
 		3079F2452897DCE4007BC76B /* XButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079F2442897DCE4007BC76B /* XButton.swift */; };
 		3079F2472897DD05007BC76B /* XButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079F2462897DD05007BC76B /* XButton.xib */; };
 		307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B682896CF7700E51215 /* AppDelegate.swift */; };
@@ -25,6 +29,16 @@
 		307E4B8E2896DA3600E51215 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 307E4B8D2896DA3600E51215 /* Rswift */; };
 		307E4B912896DA8E00E51215 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E4B902896DA8E00E51215 /* R.generated.swift */; };
 		30B96CB2289C32840079AC38 /* MyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CB1289C32840079AC38 /* MyUserDefaults.swift */; };
+		30B96CB8289C52BA0079AC38 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CB6289C52BA0079AC38 /* SplashVC.swift */; };
+		30B96CB9289C52BA0079AC38 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30B96CB7289C52BA0079AC38 /* SplashVC.xib */; };
+		30B96CBB289C53490079AC38 /* thunder.json in Resources */ = {isa = PBXBuildFile; fileRef = 30B96CBA289C53490079AC38 /* thunder.json */; };
+		30B96CBE289C54300079AC38 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CBD289C54300079AC38 /* SplashCoordinator.swift */; };
+		30B96CC2289DC8F50079AC38 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CC1289DC8F50079AC38 /* SplashViewModel.swift */; };
+		30B96CC5289DCE920079AC38 /* windy-weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 30B96CC3289DCE920079AC38 /* windy-weather.json */; };
+		30B96CC6289DCE920079AC38 /* rainy-weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 30B96CC4289DCE920079AC38 /* rainy-weather.json */; };
+		30B96CC9289DD04C0079AC38 /* SplashUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CC8289DD04C0079AC38 /* SplashUsecase.swift */; };
+		30B96CCD289DD2980079AC38 /* NextDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CCC289DD2980079AC38 /* NextDestination.swift */; };
+		30B96CD0289DD63A0079AC38 /* OnboardingUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B96CCF289DD63A0079AC38 /* OnboardingUsecase.swift */; };
 		30BE70F32896FC95009D7BC4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 30BE70F22896FC95009D7BC4 /* Lottie */; };
 		30BE70F92896FF31009D7BC4 /* icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70F82896FF31009D7BC4 /* icon.json */; };
 		30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */ = {isa = PBXBuildFile; fileRef = 30BE70FD2897095B009D7BC4 /* blueSky.json */; };
@@ -35,6 +49,10 @@
 		300BB344289B324600EE6B1B /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
 		300BB346289B32F700EE6B1B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		300BB34F289B393200EE6B1B /* icon2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon2.json; sourceTree = "<group>"; };
+		3010990828A0FB4A00058A3D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		3010990D28A108BE00058A3D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3010990E28A108BE00058A3D /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		3010991228A10AC200058A3D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		3079F2442897DCE4007BC76B /* XButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButton.swift; sourceTree = "<group>"; };
 		3079F2462897DD05007BC76B /* XButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XButton.xib; sourceTree = "<group>"; };
 		307E4B652896CF7700E51215 /* WeZCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeZCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +65,16 @@
 		307E4B892896D9F000E51215 /* OnboardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingVC.xib; sourceTree = "<group>"; };
 		307E4B902896DA8E00E51215 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		30B96CB1289C32840079AC38 /* MyUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUserDefaults.swift; sourceTree = "<group>"; };
+		30B96CB6289C52BA0079AC38 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		30B96CB7289C52BA0079AC38 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		30B96CBA289C53490079AC38 /* thunder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thunder.json; sourceTree = "<group>"; };
+		30B96CBD289C54300079AC38 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		30B96CC1289DC8F50079AC38 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		30B96CC3289DCE920079AC38 /* windy-weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "windy-weather.json"; sourceTree = "<group>"; };
+		30B96CC4289DCE920079AC38 /* rainy-weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "rainy-weather.json"; sourceTree = "<group>"; };
+		30B96CC8289DD04C0079AC38 /* SplashUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUsecase.swift; sourceTree = "<group>"; };
+		30B96CCC289DD2980079AC38 /* NextDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDestination.swift; sourceTree = "<group>"; };
+		30B96CCF289DD63A0079AC38 /* OnboardingUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUsecase.swift; sourceTree = "<group>"; };
 		30BE70F82896FF31009D7BC4 /* icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icon.json; sourceTree = "<group>"; };
 		30BE70FD2897095B009D7BC4 /* blueSky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = blueSky.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +110,48 @@
 				300BB344289B324600EE6B1B /* OnboardingState.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		3010990728A0FB4000058A3D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3010990828A0FB4A00058A3D /* AppConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3010990A28A0FEE500058A3D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3010990B28A1089700058A3D /* Presentation */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3010990B28A1089700058A3D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3010991128A10ABA00058A3D /* Logic */,
+				3010990C28A108AC00058A3D /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3010990C28A108AC00058A3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3010990D28A108BE00058A3D /* HomeVC.swift */,
+				3010990E28A108BE00058A3D /* HomeVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3010991128A10ABA00058A3D /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3010991228A10AC200058A3D /* HomeCoordinator.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		3079F2412897D9EF007BC76B /* CustomDesign */ = {
@@ -130,6 +200,7 @@
 		307E4B7C2896D80100E51215 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3010990728A0FB4000058A3D /* Configuration */,
 				30B96CB0289C32750079AC38 /* LocalStorage */,
 				3079F2412897D9EF007BC76B /* CustomDesign */,
 			);
@@ -151,7 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				307E4B802896D85C00E51215 /* StartingPoint */,
+				30B96CB3289C52890079AC38 /* Splash */,
 				307E4B832896D8ED00E51215 /* Boarding */,
+				3010990A28A0FEE500058A3D /* Home */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -196,6 +269,7 @@
 		307E4B862896D9A600E51215 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				30B96CCE289DD62E0079AC38 /* Usecase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -217,12 +291,84 @@
 			path = LocalStorage;
 			sourceTree = "<group>";
 		};
+		30B96CB3289C52890079AC38 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CC7289DD0390079AC38 /* Domain */,
+				30B96CB5289C529C0079AC38 /* Presentation */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		30B96CB4289C52920079AC38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CB6289C52BA0079AC38 /* SplashVC.swift */,
+				30B96CB7289C52BA0079AC38 /* SplashVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30B96CB5289C529C0079AC38 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CBC289C53B10079AC38 /* Logic */,
+				30B96CB4289C52920079AC38 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		30B96CBC289C53B10079AC38 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CBD289C54300079AC38 /* SplashCoordinator.swift */,
+				30B96CC1289DC8F50079AC38 /* SplashViewModel.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		30B96CC7289DD0390079AC38 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CCB289DD28C0079AC38 /* Model */,
+				30B96CCA289DD2890079AC38 /* Usecase */,
+				30B96CC8289DD04C0079AC38 /* SplashUsecase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		30B96CCA289DD2890079AC38 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		30B96CCB289DD28C0079AC38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CCC289DD2980079AC38 /* NextDestination.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30B96CCE289DD62E0079AC38 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				30B96CCF289DD63A0079AC38 /* OnboardingUsecase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
 		30BE70FC2897043B009D7BC4 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				30BE70FD2897095B009D7BC4 /* blueSky.json */,
+				30B96CC4289DCE920079AC38 /* rainy-weather.json */,
+				30B96CC3289DCE920079AC38 /* windy-weather.json */,
 				30BE70F82896FF31009D7BC4 /* icon.json */,
 				300BB34F289B393200EE6B1B /* icon2.json */,
+				30B96CBA289C53490079AC38 /* thunder.json */,
+				30BE70FD2897095B009D7BC4 /* blueSky.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -300,9 +446,14 @@
 			files = (
 				307E4B722896CF7B00E51215 /* Assets.xcassets in Resources */,
 				3079F2472897DD05007BC76B /* XButton.xib in Resources */,
+				30B96CC6289DCE920079AC38 /* rainy-weather.json in Resources */,
+				30B96CC5289DCE920079AC38 /* windy-weather.json in Resources */,
+				30B96CB9289C52BA0079AC38 /* SplashVC.xib in Resources */,
+				3010991028A108BE00058A3D /* HomeVC.xib in Resources */,
 				30BE70F92896FF31009D7BC4 /* icon.json in Resources */,
 				30BE70FE2897095B009D7BC4 /* blueSky.json in Resources */,
 				300BB350289B393200EE6B1B /* icon2.json in Resources */,
+				30B96CBB289C53490079AC38 /* thunder.json in Resources */,
 				307E4B8B2896D9F000E51215 /* OnboardingVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,13 +490,22 @@
 				307E4B822896D89500E51215 /* AppCoordinator.swift in Sources */,
 				307E4B8A2896D9F000E51215 /* OnboardingVC.swift in Sources */,
 				307E4B912896DA8E00E51215 /* R.generated.swift in Sources */,
+				3010990F28A108BE00058A3D /* HomeVC.swift in Sources */,
 				300BB342289B2EB700EE6B1B /* OnboardingCoordinator.swift in Sources */,
+				30B96CCD289DD2980079AC38 /* NextDestination.swift in Sources */,
 				300BB347289B32F700EE6B1B /* OnboardingViewModel.swift in Sources */,
+				30B96CB8289C52BA0079AC38 /* SplashVC.swift in Sources */,
 				300BB345289B324600EE6B1B /* OnboardingState.swift in Sources */,
 				30B96CB2289C32840079AC38 /* MyUserDefaults.swift in Sources */,
+				30B96CC9289DD04C0079AC38 /* SplashUsecase.swift in Sources */,
+				3010990928A0FB4A00058A3D /* AppConfig.swift in Sources */,
 				307E4B692896CF7700E51215 /* AppDelegate.swift in Sources */,
+				30B96CBE289C54300079AC38 /* SplashCoordinator.swift in Sources */,
 				307E4B6B2896CF7700E51215 /* SceneDelegate.swift in Sources */,
 				3079F2452897DCE4007BC76B /* XButton.swift in Sources */,
+				30B96CD0289DD63A0079AC38 /* OnboardingUsecase.swift in Sources */,
+				30B96CC2289DC8F50079AC38 /* SplashViewModel.swift in Sources */,
+				3010991328A10AC200058A3D /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

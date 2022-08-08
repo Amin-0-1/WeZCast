@@ -113,7 +113,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 5 files.
+  /// This `R.file` struct is generated, and contains static references to 6 files.
   struct file {
     /// Resource file `blueSky.json`.
     static let blueSkyJson = Rswift.FileResource(bundle: R.hostingBundle, name: "blueSky", pathExtension: "json")
@@ -121,10 +121,12 @@ struct R: Rswift.Validatable {
     static let iconJson = Rswift.FileResource(bundle: R.hostingBundle, name: "icon", pathExtension: "json")
     /// Resource file `icon2.json`.
     static let icon2Json = Rswift.FileResource(bundle: R.hostingBundle, name: "icon2", pathExtension: "json")
-    /// Resource file `moon.json`.
-    static let moonJson = Rswift.FileResource(bundle: R.hostingBundle, name: "moon", pathExtension: "json")
+    /// Resource file `rainy-weather.json`.
+    static let rainyWeatherJson = Rswift.FileResource(bundle: R.hostingBundle, name: "rainy-weather", pathExtension: "json")
     /// Resource file `thunder.json`.
     static let thunderJson = Rswift.FileResource(bundle: R.hostingBundle, name: "thunder", pathExtension: "json")
+    /// Resource file `windy-weather.json`.
+    static let windyWeatherJson = Rswift.FileResource(bundle: R.hostingBundle, name: "windy-weather", pathExtension: "json")
 
     /// `bundle.url(forResource: "blueSky", withExtension: "json")`
     static func blueSkyJson(_: Void = ()) -> Foundation.URL? {
@@ -144,15 +146,21 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
 
-    /// `bundle.url(forResource: "moon", withExtension: "json")`
-    static func moonJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.moonJson
+    /// `bundle.url(forResource: "rainy-weather", withExtension: "json")`
+    static func rainyWeatherJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.rainyWeatherJson
       return fileResource.bundle.url(forResource: fileResource)
     }
 
     /// `bundle.url(forResource: "thunder", withExtension: "json")`
     static func thunderJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.thunderJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "windy-weather", withExtension: "json")`
+    static func windyWeatherJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.windyWeatherJson
       return fileResource.bundle.url(forResource: fileResource)
     }
 
@@ -204,10 +212,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `OnboardingVC`.
     static let onboardingVC = _R.nib._OnboardingVC()
+    /// Nib `SplashVC`.
+    static let splashVC = _R.nib._SplashVC()
     /// Nib `XButton`.
     static let xButton = _R.nib._XButton()
 
@@ -216,6 +226,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.onboardingVC) instead")
     static func onboardingVC(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.onboardingVC)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SplashVC", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.splashVC) instead")
+    static func splashVC(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.splashVC)
     }
     #endif
 
@@ -229,6 +247,10 @@ struct R: Rswift.Validatable {
 
     static func onboardingVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.onboardingVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func splashVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.splashVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func xButton(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
@@ -276,6 +298,17 @@ struct _R: Rswift.Validatable {
         if #available(iOS 13.0, *) { if UIKit.UIImage(systemName: "arrow.right") == nil { throw Rswift.ValidationError(description: "[R.swift] System image named 'arrow.right' is used in nib 'OnboardingVC', but couldn't be loaded.") } }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SplashVC: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SplashVC"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
 
       fileprivate init() {}

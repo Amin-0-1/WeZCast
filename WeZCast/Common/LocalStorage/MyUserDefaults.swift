@@ -7,23 +7,24 @@
 
 import Foundation
 
-protocol MyUserDefaultsInterface{
-    static func getValue(forkKey key:UDKeys)->Any?
-    static func set(value val:Any,forKey key:UDKeys)
+protocol LocalStorageInterface{
+    func getValue(forKey key:UDKeys)->Any?
+    func set(value val:Any,forKey key:UDKeys)
 }
 enum UDKeys:String{
     case onboarding
 }
-class MyUserDefaults{
-    let shared = MyUserDefaults()
-    private static let userDefaults:UserDefaults = UserDefaults.standard
+
+class MyUserDefaults: LocalStorageInterface{
+    static let shared = MyUserDefaults()
+    private let userDefaults:UserDefaults = UserDefaults.standard
     
     private init(){}
-    static func getValue(forKey key:UDKeys)->Any?{
+    func getValue(forKey key:UDKeys)->Any?{
         let val = userDefaults.value(forKey:key.rawValue)
         return val
     }
-    static func set(value val:Any,forKey key:UDKeys){
+    func set(value val:Any,forKey key:UDKeys){
         userDefaults.set(val, forKey: key.rawValue)
     }
 }

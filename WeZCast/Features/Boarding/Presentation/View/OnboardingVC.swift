@@ -11,7 +11,7 @@ import CoreLocation
 
 class OnboardingVC: UIViewController ,CLLocationManagerDelegate{
 
-    @IBOutlet private var uiAnimationLogo: AnimationView!
+    private var uiAnimationLogo: AnimationView!
     @IBOutlet private weak var uiAnimationView: AnimationView!
     @IBOutlet private weak var uiNextButton: XButton!
     @IBOutlet private weak var uiTitle: UILabel!
@@ -47,7 +47,7 @@ class OnboardingVC: UIViewController ,CLLocationManagerDelegate{
             } else if let error = error {
                 print(error.localizedDescription)
             }
-            
+            self.viewModel.input.onFinishOnboarding.onNext(())
         }
     }
     private func configureLocation(){
