@@ -167,10 +167,19 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
+    /// Image `clouds`.
+    static let clouds = Rswift.ImageResource(bundle: R.hostingBundle, name: "clouds")
     /// Image `dark`.
     static let dark = Rswift.ImageResource(bundle: R.hostingBundle, name: "dark")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "clouds", bundle: ..., traitCollection: ...)`
+    static func clouds(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.clouds, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "dark", bundle: ..., traitCollection: ...)`
@@ -212,14 +221,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
+    /// Nib `HomeVC`.
+    static let homeVC = _R.nib._HomeVC()
     /// Nib `OnboardingVC`.
     static let onboardingVC = _R.nib._OnboardingVC()
     /// Nib `SplashVC`.
     static let splashVC = _R.nib._SplashVC()
     /// Nib `XButton`.
     static let xButton = _R.nib._XButton()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HomeVC", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeVC) instead")
+    static func homeVC(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeVC)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "OnboardingVC", in: bundle)`
@@ -244,6 +263,10 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.xButton)
     }
     #endif
+
+    static func homeVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.homeVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
 
     static func onboardingVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.onboardingVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
@@ -283,7 +306,25 @@ struct _R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _HomeVC.validate()
       try _OnboardingVC.validate()
+    }
+
+    struct _HomeVC: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "HomeVC"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "clouds", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'clouds' is used in nib 'HomeVC', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
     }
 
     struct _OnboardingVC: Rswift.NibResourceType, Rswift.Validatable {

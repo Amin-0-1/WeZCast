@@ -27,7 +27,8 @@ class SplashCoordinator:SplashCoordinating{
     }
     
     func navigateToHome() {
-        let 
+        let coordinator = HomeCoordinator(nav: self.nav)
+        coordinator.start()
     }
     
     func navigateToOnboarding() {
