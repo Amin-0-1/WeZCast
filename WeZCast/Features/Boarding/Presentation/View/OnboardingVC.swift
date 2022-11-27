@@ -11,8 +11,8 @@ import CoreLocation
 
 class OnboardingVC: UIViewController ,CLLocationManagerDelegate{
 
-    @IBOutlet private var uiAnimationLogo: AnimationView!
-    @IBOutlet private weak var uiAnimationView: AnimationView!
+    @IBOutlet private var uiAnimationLogo: LottieAnimationView!
+    @IBOutlet private weak var uiAnimationView: LottieAnimationView!
     @IBOutlet private weak var uiNextButton: XButton!
     @IBOutlet private weak var uiTitle: UILabel!
     
