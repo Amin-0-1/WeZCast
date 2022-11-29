@@ -56,6 +56,7 @@ class OnboardingViewModel: OnboardingProtocol{
         input.onFinishOnboarding.bind{ [weak self] _ in
             guard let self = self else {return}
             self.usecase.onFinishOnboarind()
+            self.coordinator.navigateToHome()
         }.disposed(by: bag)
     }
     
