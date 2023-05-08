@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 class SplashVC: UIViewController {
 
-    @IBOutlet weak var uiAnimationView: AnimationView!
+    @IBOutlet weak var uiAnimationView: LottieAnimationView!
     var viewModel:SplashVMProtocol!
     override func viewDidLoad() {
         super.viewDidLoad()
