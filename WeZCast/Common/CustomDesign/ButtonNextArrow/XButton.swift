@@ -9,9 +9,7 @@ import UIKit
 import Lottie
 
 
-class Test: UIButton{
-    
-}
+
 @IBDesignable
 class XButton: UIButton {
     

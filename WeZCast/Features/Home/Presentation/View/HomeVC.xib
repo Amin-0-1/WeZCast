@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,13 +22,25 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds" translatesAutoresizingMaskIntoConstraints="NO" id="yvX-iN-3Rm">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zw6-bY-KWt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="R0M-Sv-307">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="yvX-iN-3Rm" secondAttribute="bottom" id="0md-yS-LY5"/>
+                <constraint firstAttribute="bottom" secondItem="zw6-bY-KWt" secondAttribute="bottom" id="9Oo-S6-zz8"/>
                 <constraint firstItem="yvX-iN-3Rm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SX1-xt-XHf"/>
+                <constraint firstItem="zw6-bY-KWt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SuX-bV-tc7"/>
+                <constraint firstItem="zw6-bY-KWt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YHT-Dr-cYk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yvX-iN-3Rm" secondAttribute="trailing" id="kO0-1b-ru3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zw6-bY-KWt" secondAttribute="trailing" id="khb-xP-ST0"/>
                 <constraint firstItem="yvX-iN-3Rm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qGb-cs-PMz"/>
             </constraints>
             <point key="canvasLocation" x="139" y="106"/>

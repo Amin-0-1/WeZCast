@@ -19,7 +19,6 @@ struct AppCoordinatore:Coordinating{
     }
     func start() {
         let nav = UINavigationController()
-//        let onboardingCoordinator = OnboardingCoordinator(nav: nav)
         let splashCoord = SplashCoordinator(nav: nav)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()

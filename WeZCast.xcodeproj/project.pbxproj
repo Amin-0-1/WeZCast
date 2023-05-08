@@ -331,17 +331,9 @@
 			isa = PBXGroup;
 			children = (
 				30B96CCB289DD28C0079AC38 /* Model */,
-				30B96CCA289DD2890079AC38 /* Usecase */,
 				30B96CC8289DD04C0079AC38 /* SplashUsecase.swift */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		30B96CCA289DD2890079AC38 /* Usecase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Usecase;
 			sourceTree = "<group>";
 		};
 		30B96CCB289DD28C0079AC38 /* Model */ = {
